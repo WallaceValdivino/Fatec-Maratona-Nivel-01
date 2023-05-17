@@ -1,11 +1,32 @@
 #include <stdio.h>
 
 int main() {
-    for (int I = 1; I <= 9; I+=2) {
-        for (int J = 7; J >= 5; J--) {
-            printf("I=%d J=%d\n", I, J);
+    int M, N;
+    
+    while (1) {
+        scanf("%d %d", &M, &N);
+        
+        if (N <= 0 || M <= 0)
+            break;
+        
+        int menor, maior;
+        int resultado = 0;
+        
+        if (M < N) {
+            menor = M;
+            maior = N;
+        } else {
+            menor = N;
+            maior = M;
         }
+        
+        for (int i = menor; i <= maior; i++) {
+            printf("%d ", i);
+            resultado += i;
+        }
+        
+        printf("Sum=%d\n", resultado);
     }
- 
+    
     return 0;
 }
