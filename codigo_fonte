@@ -1,16 +1,11 @@
 #include <stdio.h>
  
 int main() {
- double area;
-    double n;
-    double raio;
-    n = 3.14159;
-    
-    scanf("%lf", &raio);
-    
-    area = n*(raio * raio);
- 
- 
-    printf("A=%0.4lf\n", area);
+ int SOMA, A, B;
+   scanf("%d", &A);
+    scanf("%d", &B);
+SOMA = A + B; 
+
+printf("SOMA = %d\n", SOMA);
     return 0;
 }
