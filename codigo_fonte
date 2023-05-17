@@ -1,21 +1,13 @@
 #include <stdio.h>
-
+ 
 int main() {
-  int x, y, sum = 0;
-  scanf("%d%d", &x, &y);
-  
-  if (x > y) {
-    int temp = x;
-    x = y;
-    y = temp;
-  }
-
-  for (int i = x + 1; i < y; i++) {
-    if (i % 2 != 0) {
-      sum += i;
+    int N;
+    
+    scanf("%d", &N);
+    
+    for (int i = 2; i <= N; i += 2) {
+        printf("%d^2 = %d\n", i, i * i);
     }
-  }
-
-  printf("%d\n", sum);
-  return 0;
+    
+    return 0;
 }
