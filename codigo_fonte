@@ -1,34 +1,32 @@
 #include <stdio.h>
- 
+#include <math.h>
+
 int main() {
- int codigo;
- int qtd;
- float total;
- float preco;
- scanf("%d", &codigo);
-  scanf("%d", &qtd);
-  
-  switch (codigo) {
-    case 1:
-preco = 4;
-break;
-    case 2:
-preco = 4.5;
-break;
-    case 3:
-preco = 5;
-break;
-         case 4:
-       preco = 2;
-        break;
-         case 5:
-         preco = 1.5;
-        break;
+    float X, Y;
+    int lugar;
+    const float TOLERANCIA = 0.0001;
     
-}
-total = preco*qtd;
+    scanf("%f", &X);
+    scanf("%f", &Y);
+    
+    X = roundf(X * 10) / 10;
+    Y = roundf(Y * 10) / 10;
 
-printf("Total: R$ %.2f\n", total);
-
+    if (fabs(X) < TOLERANCIA && fabs(Y) < TOLERANCIA) {
+        printf("Origem\n");
+    } else if (fabs(X) < TOLERANCIA && fabs(Y) >= TOLERANCIA) {
+        printf("Eixo Y\n");
+    } else if (fabs(X) >= TOLERANCIA && fabs(Y) < TOLERANCIA) {
+        printf("Eixo X\n");
+    } else if (X > 0 && Y > 0) {
+        printf("Q1\n");
+    } else if (X < 0 && Y > 0) {
+        printf("Q2\n");
+    } else if (X < 0 && Y < 0) {
+        printf("Q3\n");
+    } else if (X > 0 && Y < 0) {
+        printf("Q4\n");
+    }
+   
     return 0;
 }
