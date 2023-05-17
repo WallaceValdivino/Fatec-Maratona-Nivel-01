@@ -1,11 +1,16 @@
 #include <stdio.h>
  
 int main() {
- int SOMA, A, B;
-   scanf("%d", &A);
-    scanf("%d", &B);
-SOMA = A + B; 
-
-printf("SOMA = %d\n", SOMA);
-    return 0;
+  int X;
+  float Y;
+  float Z;
+  
+  scanf("%d", &X);
+  scanf("%f", &Y);
+  
+  Z = X/Y;
+ 
+  printf("%.3f%s\n", Z, " km/l");
+ 
+  return 0;
 }
