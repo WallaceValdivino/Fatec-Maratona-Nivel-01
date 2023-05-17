@@ -1,11 +1,22 @@
 #include <stdio.h>
  
 int main() {
+    int N;
+    double A;
+    double B;
+    double C;
+    double resultado;
+    scanf("%d", &N);
+    
+    for(int i = 0; i <N; i++ ){
+         scanf("%lf", &A);
+          scanf("%lf", &B);
+           scanf("%lf", &C);
+           resultado = ((A * 2)+(B *3)+(C * 5))/10;
+           printf("%.1lf\n", resultado);
+    }
  
-   int N;
-   scanf("%d", &N);
-   for(int i = 1; i <=10; i++){
-       printf("%d x %d = %d\n", i, N, i*N);
-   }
+ 
+ 
     return 0;
 }
