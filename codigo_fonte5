@@ -1,0 +1,16 @@
+#include <stdio.h>
+ 
+int main() {
+  int X;
+  float Y;
+  float Z;
+  
+  scanf("%d", &X);
+  scanf("%f", &Y);
+  
+  Z = X/Y;
+ 
+  printf("%.3f%s\n", Z, " km/l");
+ 
+  return 0;
+}
